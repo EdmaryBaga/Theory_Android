@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Theory_Android</string>
+    <string name="brand">EdmaryDev</string>
+    <string name="tiitle_recycler_view">Recycler view Frameworks</string>
 </resources>
