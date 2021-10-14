@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Theory_Android</string>
+    <string name="tittle_button">Muestrame el toast</string>
 </resources>
