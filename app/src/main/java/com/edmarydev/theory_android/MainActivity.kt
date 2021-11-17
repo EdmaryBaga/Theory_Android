@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
     private fun speack(){
-        var message : String = binding.tvMessage.text.toString()
+        var message : String = binding.etNewmessage.text.toString()
         tts!!.speak(message, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 
