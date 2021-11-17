@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import com.edmarydev.theory_android.databinding.ActivityMainBinding
+import java.util.*
 
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -19,19 +20,23 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this,this)
 
+        binding.btnSpeech.setOnClickListener(){speack()}
+
+    }
+
+    private fun speack(){
         var message : String = binding.tvMessage.text.toString()
-
-        Log.i("message view", message)
-
+        tts!!.speak(message, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 
     override fun onInit(status: Int) {
         binding.tvMessage.clearComposingText()
         if(status == TextToSpeech.SUCCESS){
-            binding.tvMessage.text = "Listo!"
+            binding.tvMessage.text = "I can speack!"
+            tts!!.setLanguage(Locale.US)
         }
         else{
-            binding.tvMessage.text = "No disponible!"
+            binding.tvMessage.text = "I am mute!"
         }
     }
 
