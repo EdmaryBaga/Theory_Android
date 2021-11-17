@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         binding.btnSpeech.setOnClickListener(){speack()}
 
+
     }
 
     private fun speack(){
