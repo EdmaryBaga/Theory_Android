@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private fun speack(){
         var message : String = binding.etNewmessage.text.toString()
+        if(message.isEmpty()){
+            message = "Quiero hablar escribe algo por favor!!"
+        }
         tts!!.speak(message, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 
