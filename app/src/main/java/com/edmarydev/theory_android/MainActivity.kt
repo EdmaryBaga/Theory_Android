@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding.tvMessage.clearComposingText()
         if(status == TextToSpeech.SUCCESS){
             binding.tvMessage.text = "I can speack!"
-            tts!!.setLanguage(Locale.US)
+            tts!!.setLanguage(Locale("ES"))
         }
         else{
             binding.tvMessage.text = "I am mute!"
